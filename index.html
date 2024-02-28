@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/style.css" />
+		<script
+			src="https://kit.fontawesome.com/de04a45e16.js"
+			crossorigin="anonymous"
+		></script>
+		<title>Dictionary Web App</title>
+	</head>
+	<body>
+		<main>
+			<nav class="navbar">
+				<div class="controls">
+					<div class="icon">web dictionary app</div>
+					<div class="inner-controls">
+						<div class="font">
+							<label aria-label="font drop down menu" for="font"></label>
+							<select name="font" id="font">
+								<option value="sansserif">Sans Serif</option>
+								<option value="serif">Serif</option>
+								<option value="monospace">Monospace</option>
+							</select>
+						</div>
+						<div class="theme-switch-wrapper">
+							<label class="theme-switch" for="checkbox">
+								<input type="checkbox" id="checkbox" />
+								<div class="slider round icons">
+									<i id="sun" class="fa-solid fa-sun"></i>
+									<i id="moon" class="fa-solid fa-moon"></i>
+								</div>
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="search-form">
+					<form method="" action="">
+						<input
+							aria-label="input for the search word"
+							type="text"
+							name="search-term"
+							id="search-term"
+							placeholder="search ..."
+						/>
+						<button id="search-button" aria-label="search button" type="">
+							<i class="fa-solid fa-magnifying-glass"></i>
+						</button>
+					</form>
+				</div>
+			</nav>
+			<div class="search-result">
+				<div class="heading">
+					<div class="title">
+						<div class="word"></div>
+						<div class="text-pronounciation"></div>
+					</div>
+					<div class="play">
+						<audio hidden class="audio-pronounciation" src=""></audio>
+						<i
+							id="play-icon"
+							class="hidden fa-regular fa-2x fa-circle-play"
+						></i>
+					</div>
+				</div>
+				<div class="body">
+					<div class="definitions">
+						<div id="nouns" class="definition nouns hidden">
+							<div class="definition-title">
+								<div class="definition-name">noun</div>
+								<div class="definition-line"></div>
+							</div>
+							<div class="meaning">
+								<div class="meaning-title">Meaning</div>
+								<ul class="meaning-definitions" id="lis-noun"></ul>
+							</div>
+						</div>
+						<div id="verbs" class="definition verbs hidden">
+							<div class="definition-title">
+								<div class="definition-name">verb</div>
+								<div class="definition-line"></div>
+							</div>
+							<div class="meaning">
+								<div class="meaning-title">Meaning</div>
+								<ul class="meaning-definitions" id="lis-verb"></ul>
+							</div>
+						</div>
+						<div id="adjectives" class="definition adjectives hidden">
+							<div class="definition-title">
+								<div class="definition-name">adjective</div>
+								<div class="definition-line"></div>
+							</div>
+							<div class="meaning">
+								<div class="meaning-title">Meaning</div>
+								<ul class="meaning-definitions" id="lis-adjective"></ul>
+							</div>
+						</div>
+						<div id="adverbs" class="definition adverbs hidden">
+							<div class="definition-title">
+								<div class="definition-name">adverb</div>
+								<div class="definition-line"></div>
+							</div>
+							<div class="meaning">
+								<div class="meaning-title">Meaning</div>
+								<ul class="meaning-definitions" id="lis-adverb"></ul>
+							</div>
+						</div>
+						<div id="interjections" class="definition interjection hidden">
+							<div class="definition-title">
+								<div class="definition-name">interjection</div>
+								<div class="definition-line"></div>
+							</div>
+							<div class="meaning">
+								<div class="meaning-title">Meaning</div>
+								<ul class="meaning-definitions" id="lis-interjection"></ul>
+							</div>
+						</div>
+						<div id="conjunction" class="definition conjunction hidden">
+							<div class="definition-title">
+								<div class="definition-name">interjection</div>
+								<div class="definition-line"></div>
+							</div>
+							<div class="meaning">
+								<div class="meaning-title">Meaning</div>
+								<ul class="meaning-definitions" id="lis-conjunction"></ul>
+							</div>
+						</div>
+					</div>
+					<div id="source-link" class="source hidden">
+						<div class="border">
+							<span class="source-title">Source:</span>
+							<span class="source-link">
+								<a id="source-link-a" href=""> </a>
+								<i class="fa-solid fa-arrow-up-right-from-square"></i>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<script src="js/app.js"></script>
+	</body>
+</html>
